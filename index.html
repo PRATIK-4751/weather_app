@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>weather forecast :)</title>
-    
+    <title>Weather Forecast :)</title>
     <link rel="icon" type="image/png" href="https://i.pinimg.com/736x/c3/64/b7/c364b72b49363d2299428070ed10115a.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script async src="https://unpkg.com/es-module-shims@1.8.0/dist/es-module-shims.js"></script>
@@ -21,30 +20,32 @@
 <body class="light">
     <canvas id="bg"></canvas>
     <div class="content">
-        <div class="theme-toggle">
-            <button id="mode-toggle" class="mode-toggle">
+        <header class="theme-toggle">
+            <button id="mode-toggle" class="mode-toggle" aria-label="Toggle dark/light mode">
                 <i class="fas fa-moon"></i>
             </button>
-            <button id="auto-toggle" class="auto-toggle active">
+            <button id="auto-toggle" class="auto-toggle active" aria-label="Toggle auto mode">
                 <i class="fas fa-clock"></i>
             </button>
-        </div>
-        <div class="search-container">
-            <input type="text" id="search-input" placeholder="Enter location">
-            <button id="search-btn">Search</button>
-        </div>
-        <div class="weather-container">
-            <div class="current-weather">
-                <h2 id="day"></h2>
-                <p id="date-location"></p>
-                <div class="temperature-container">
-                    <i id="current-weather-icon" class="fas"></i>
-                    <h1 id="temperature"></h1>
-                </div>
-                <p id="condition"></p>
+        </header>
+        <main>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Enter location" aria-label="Search location">
+                <button id="search-btn">Search</button>
             </div>
-            <div class="forecast" id="forecast-container"></div>
-        </div>
+            <section class="weather-container">
+                <div class="current-weather">
+                    <h2 id="day"></h2>
+                    <p id="date-location"></p>
+                    <div class="temperature-container">
+                        <i id="current-weather-icon" class="fas"></i>
+                        <h1 id="temperature"></h1>
+                    </div>
+                    <p id="condition"></p>
+                </div>
+                <div class="forecast" id="forecast-container"></div>
+            </section>
+        </main>
     </div>
     <script type="module" src="main.js"></script>
 </body>
