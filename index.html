@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather forecast :)</title>
+    
+    <link rel="icon" type="image/png" href="https://i.pinimg.com/736x/c3/64/b7/c364b72b49363d2299428070ed10115a.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script async src="https://unpkg.com/es-module-shims@1.8.0/dist/es-module-shims.js"></script>
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.162.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.162.0/examples/jsm/"
+        }
+    }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light">
+    <canvas id="bg"></canvas>
+    <div class="content">
+        <div class="theme-toggle">
+            <button id="mode-toggle" class="mode-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button id="auto-toggle" class="auto-toggle active">
+                <i class="fas fa-clock"></i>
+            </button>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Enter location">
+            <button id="search-btn">Search</button>
+        </div>
+        <div class="weather-container">
+            <div class="current-weather">
+                <h2 id="day"></h2>
+                <p id="date-location"></p>
+                <div class="temperature-container">
+                    <i id="current-weather-icon" class="fas"></i>
+                    <h1 id="temperature"></h1>
+                </div>
+                <p id="condition"></p>
+            </div>
+            <div class="forecast" id="forecast-container"></div>
+        </div>
+    </div>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
